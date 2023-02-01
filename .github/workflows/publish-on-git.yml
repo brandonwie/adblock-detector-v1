@@ -1,5 +1,5 @@
 # .github/workflows/release-package.yml
-name: on release - github
+name: Publish on GitHub 🚀
 
 on:
   release:
@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
-      - run: npm run install
+      - run: npm install
       - run: npm run build
       - run: npm publish
         env:
