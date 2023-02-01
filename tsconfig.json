@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": ".github/workflows/dist",
     "lib": ["DOM", "DOM.Iterable", "ES2015", "ES2016", "ES2017"],
     "target": "es5",
     "module": "esnext",
@@ -21,5 +21,10 @@
     "typeRoots": ["index.d.ts", "node_modules/@types"]
   },
   "include": ["./src/**/*.tsx", "./src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "lib", "rollup.config.js"]
+  "exclude": [
+    "node_modules",
+    ".github/workflows/dist",
+    "lib",
+    "rollup.config.js"
+  ]
 }

@@ -1,11 +1,8 @@
-name: Publish to NPM 📦
+name: Publish Package to npmjs 📦
 
 on:
   release:
     types: [created]
-
-env:
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
   publish-npm-registry:
@@ -17,15 +14,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Installing dependencies and building ... 🚧
-        run: npm install && npm run build
-
-      - name: Configuring npm ... 🔎
-        run: |
-          echo '//registry.npmjs.org/:_authToken=$NPM_TOKEN' > .npmrc
-          cat .npmrc
-      - name: Publishing package on NPM ... 📦
-        run: npm publish
+          always-auth: true,
+          node-version: '18.x'
+          registry-url: https://registry.npmjs.org
+      - run: npm install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

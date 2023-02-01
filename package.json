@@ -1,7 +1,8 @@
 {
-  "namespace": "@brndw",
-  "name": "adblock-detector",
+  "name": "@brandonwie/adblock-detector",
+  "author": "brandonwie",
   "version": "0.0.1",
+  "license": "MIT",
   "private": false,
   "description": "Detects ad blockers and show modal to inform, built for React.JS",
   "type": "module",
@@ -15,8 +16,6 @@
     "build": "rollup -c",
     "dev": "rollup -cw"
   },
-  "author": "brandonwie",
-  "license": "MIT",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
