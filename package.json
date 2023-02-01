@@ -1,5 +1,6 @@
 {
-  "name": "@brndw/adblock-detector",
+  "namespace": "@brndw",
+  "name": "adblock-detector",
   "version": "0.0.1",
   "private": false,
   "description": "Detects ad blockers and show modal to inform, built for React.JS",
@@ -11,8 +12,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && rollup -c",
-    "dev": "rm -rf dist && rollup -cw"
+    "build": "rollup -c",
+    "dev": "rollup -cw"
   },
   "author": "brandonwie",
   "license": "MIT",
