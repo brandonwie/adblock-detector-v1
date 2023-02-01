@@ -1,0 +1,31 @@
+name: Publish to NPM 📦
+
+on:
+  release:
+    types: [created]
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+jobs:
+  publish-npm-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Installing dependencies and building ... 🚧
+        run: npm install && npm run build
+
+      - name: Configuring npm ... 🔎
+        run: |
+          echo '//registry.npmjs.org/:_authToken=$NPM_TOKEN' > .npmrc
+          cat .npmrc
+      - name: Publishing package on NPM ... 📦
+        run: npm publish
