@@ -14,10 +14,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          always-auth: true,
+          always-auth: true
           node-version: '18.x'
-          registry-url: https://registry.npmjs.org
-      - run: npm install
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
