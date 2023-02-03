@@ -35,6 +35,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.27",
+    "cz-emoji": "^1.3.2-canary.2",
     "husky": "^8.0.3",
     "rollup": "^3.12.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -53,5 +54,10 @@
       "dev",
       "main"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
   }
 }
