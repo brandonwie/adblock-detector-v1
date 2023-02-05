@@ -1,0 +1,1 @@
+export { firstFunction } from './firstFunction';
