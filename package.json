@@ -58,5 +58,8 @@
     "commitizen": {
       "path": "cz-emoji"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
