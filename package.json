@@ -7,6 +7,9 @@
   "description": "Detects ad blockers and show modal to inform, built for React.JS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
@@ -58,8 +61,5 @@
     "commitizen": {
       "path": "cz-emoji"
     }
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   }
 }
