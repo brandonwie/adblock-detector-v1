@@ -1,7 +1,7 @@
 {
   "name": "adblock-detector-v1",
   "author": "brandonwie",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "license": "MIT",
   "private": false,
   "description": "Detects ad blockers and show modal to inform, built for React.JS",
